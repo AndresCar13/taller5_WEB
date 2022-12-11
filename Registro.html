@@ -5,49 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Registro.js"></script>
+    <link rel="stylesheet" href="Registro.css">
     <title>Document</title>
 </head>
 <body>
-<FORM action="index.html" method="post">
-    <P>
-        Nombre: <label>
-        <INPUT type="text" name="nombre">
-    </label><BR><BR>
-        Apellido: <label>
-        <INPUT type="text" name="apellido">
-    </label><BR><BR>
-        Fecha de nacimiento: <label>
-        <input type="date" name="fecha_naci">
-    </label><br><br>
-        Correo electrónico: <label>
-        <INPUT type="email" name="email">
-    </label><BR><br>
-        Usuario: <input type="text" name="usuario" required pattern="[A-Za-z0-9]+"
-                        title="Sin caracteres extraños"><br><br>
-        Contraseña: <label>
-        <input type="password" name="contrasena">
-    </label><br><br><br>
+    <FORM action="index.html" method="post">
+        <P>
+            Nombre:
+            <label>
+                <INPUT type="text" name="nombre">
+            </label><BR><BR>
 
-        ¿Ha sufrido enfermedades graves?<br>
-    <div class="control">
-        <label>
-            <INPUT type="radio" name="enfermedad" onclick="toggle(this)" value="a">
-        </label> Si
-        <label>
-            <INPUT type="radio" name="enfermedad" onclick="toggle(this)" checked="checked" value="b">
-        </label> No<BR><br>
-    </div>
-    <div class="enfermedades" id="uno" style="display: none">
-        - Gripa<br>
-        - Cáncer<br>
-        - Meningitis<br>
-        - Otra<br><br>
-        Cuales: <label>
-        <input type="text" name="enfermedad">
-    </label><br><br>
-    </div>
+            Apellido:
+            <label>
+                <INPUT type="text" name="apellido">
+            </label><BR><BR>
 
-    <INPUT type="submit" value="Enviar"> <INPUT type="reset">
-</FORM>
+            Fecha de nacimiento:
+            <label>
+                <input type="date" name="fecha_naci">
+            </label><br><br>
+
+            Correo electrónico:
+            <label>
+                <INPUT type="email" name="email">
+            </label><BR><br>
+
+            Usuario:
+            <input type="text" name="usuario" required pattern="[A-Za-z0-9]+"
+                            title="Sin caracteres extraños"><br><br>
+
+            Contraseña:
+            <label>
+                <input type="password" name="contrasena">
+            </label><br><br><br>
+
+            ¿Ha sufrido enfermedades graves?<br>
+            <div class="control">
+                <label>
+                    <INPUT type="radio" name="enfermedad" onclick="toggle(this)" value="a">
+                </label> Si
+
+                <label>
+                    <INPUT type="radio" name="enfermedad" onclick="toggle(this)" checked="checked" value="b">
+                </label> No<BR><br>
+            </div>
+
+            <div class="enfermedades" id="uno" style="display: none">
+                - Gripa<br>
+                - Cáncer<br>
+                - Meningitis<br>
+                - Otra<br><br>
+                Cuales: <label>
+                <input type="text" name="enfermedad">
+                </label><br><br>
+            </div>
+
+        <INPUT type="submit" value="Enviar"> <INPUT type="reset">
+    </FORM>
 </body>
 </html>
