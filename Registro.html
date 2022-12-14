@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="Registro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="Registro.css">
     <title>Document</title>
 </head>
 <body>
-    <FORM action="index.html" method="post">
+    <FORM action="index.html" method="post" onsubmit="checkForm(this); return false;">
         <P>
             Nombre:
             <label>
@@ -33,12 +34,18 @@
 
             Usuario:
             <input type="text" name="usuario" required pattern="[A-Za-z0-9]+"
-                            title="Sin caracteres extraños"><br><br>
+                            title="Sin caracteres extraños"><br>
 
-            Contraseña:
-            <label>
-                <input type="password" name="contrasena">
-            </label><br><br><br>
+
+            <p>Contraseña: <label>
+                <input type="password" name="pwd1">
+            </label></p>
+
+            <p>Confirmar Contraseña: <label>
+                <input type="password" name="pwd2">
+            </label></p><br>
+
+
 
             ¿Ha sufrido enfermedades graves?<br>
             <div class="control">
@@ -61,7 +68,7 @@
                 </label><br><br>
             </div>
 
-        <INPUT type="submit" value="Enviar"> <INPUT type="reset">
+        <INPUT type="submit" value="Verificar"> <INPUT type="reset">
     </FORM>
 </body>
 </html>
